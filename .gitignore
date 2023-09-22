@@ -36,6 +36,8 @@
 
 # IDE configuration files
 *.code-workspace
+.vscode/
 
 # Compiled generation files
-/build/*
+build/
+bin/

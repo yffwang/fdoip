@@ -27,5 +27,5 @@ int main(int argc, char* argv[]) {
     std::for_each(
         in(std::cin), in(), std::cout << (_1 * 4) << " " );
     std::cout << std::endl;
-    return 0;
+    return 0;       
 }
