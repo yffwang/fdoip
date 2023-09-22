@@ -30,3 +30,12 @@
 *.exe
 *.out
 *.app
+
+# Macos System
+*.DS_Store
+
+# IDE configuration files
+*.code-workspace
+
+# Compiled generation files
+/build/*
