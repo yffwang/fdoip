@@ -1,1 +1,1 @@
-add_subdirectory(message)
+add_subdirectory(endpoint)

@@ -1,0 +1,9 @@
+file(GLOB ENPOINT_SRC_LIST 
+    ${CMAKE_CURRENT_LIST_DIR}/*.cpp 
+    ${CMAKE_CURRENT_LIST_DIR}/*.hpp
+)
+
+target_sources(${SOFTWARE_COMPONENT_NAME}
+    PRIVATE
+        ${ENPOINT_SRC_LIST}
+)

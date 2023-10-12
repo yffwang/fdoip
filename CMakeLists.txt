@@ -29,4 +29,5 @@ endif()
 message(STATUS ">>>> Boost_INCLUDE_DIR:     ${Boost_INCLUDE_DIRS}")
 message(STATUS ">>>> Boost_LIB_DIR:         ${Boost_LIBRARIES}")
 
+add_subdirectory(src)
 add_subdirectory(test)
