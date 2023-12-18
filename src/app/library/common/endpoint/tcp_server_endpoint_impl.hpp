@@ -1,6 +1,8 @@
 #ifndef FDOIP_V1_TCP_SERVER_ENDPOINT_IMPL_HPP_
 #define FDOIP_V1_TCP_SERVER_ENDPOINT_IMPL_HPP_
 
+#include <map>
+
 #include <boost/asio/io_service.hpp>
 #include <boost/asio/ip/tcp.hpp>
 
@@ -24,6 +26,7 @@ private:
 
         boost::asio::ip::tcp::socket& get_socket();
         std::mutex& get_socket_lock();
+        void set_remote_info(const boost::asio::ip::tcp::endpoint &_remote);
 
     private:
         session(const std::weak_ptr<tcp_server_endpoint_impl>& _server,
@@ -54,6 +57,10 @@ private:
 private:
     std::mutex acceptor_mutex_;
     boost::asio::ip::tcp::acceptor acceptor_;
+
+    typedef std::map<boost::asio::ip::tcp::endpoint, session::ptr> sessions_t;
+    sessions_t sessions_management_;
+    std::mutex sessions_management_mutex_;
 
     // Reference to service context
     boost::asio::io_context &io_;
