@@ -1,7 +1,7 @@
-set(TARGET_EXECUTABLE example_2)
+set(TARGET_EXECUTABLE example_target)
 
 add_executable(${TARGET_EXECUTABLE}
-        ${CMAKE_CURRENT_LIST_DIR}/example2.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/example_coroutine1.cpp
 )
 
 target_include_directories(${TARGET_EXECUTABLE}
